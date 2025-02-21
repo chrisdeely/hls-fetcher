@@ -9,6 +9,7 @@ const main = function (options) {
     basedir: options.output,
     uri: options.input,
     keepAbsSegmentPaths: options.keepAbsSegmentPaths,
+    downloadSegments: options.downloadSegments,
   };
 
   return WalkManifest(settings).then(function (resources) {

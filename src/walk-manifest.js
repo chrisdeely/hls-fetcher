@@ -239,6 +239,7 @@ const walkPlaylist = function (options) {
       dashPlaylist = null,
       requestRetryDelay = 5000,
       keepAbsSegmentPaths = false,
+      downloadSegments = true,
     } = options;
 
     let resources = [];
@@ -408,7 +409,7 @@ const walkPlaylist = function (options) {
                 s.key.iv ||
                 new Uint32Array([0, 0, 0, manifest.parsed.mediaSequence, i]);
             }
-            resources.push(s);
+            if (downloadSegments) resources.push(s);
           });
 
           // SUB Playlists
@@ -429,6 +430,7 @@ const walkPlaylist = function (options) {
               requestRetryMaxAttempts,
               requestRetryDelay,
               keepAbsSegmentPaths,
+              downloadSegments,
             });
           });
 

@@ -22,7 +22,10 @@ const pessimist = require("pessimist")
   .describe(
     "abs",
     "convert the segment URIs to absolute paths (inc protocol & hostname) (default: false)"
-  ).argv;
+  )
+  .alias("s", "skipSegments")
+  .default("s", false)
+  .describe("s", "do not download the segments (default: false)").argv;
 
 // Make output path
 const output = path.resolve(pessimist.o);
@@ -33,6 +36,7 @@ const options = {
   concurrency: pessimist.c,
   decrypt: pessimist.d,
   keepAbsSegmentPaths: pessimist.a,
+  downloadSegments: !pessimist.s,
 };
 
 start(options)
