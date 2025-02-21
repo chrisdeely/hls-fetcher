@@ -32,3 +32,6 @@ docs/api/
 test/dist/
 .eslintcache
 .yo-rc.json
+
+# test output
+output/
