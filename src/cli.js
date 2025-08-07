@@ -17,10 +17,10 @@ const pessimist = require("pessimist")
   .alias("d", "decrypt")
   .default("d", false)
   .describe("d", "decrypt and remove enryption from manifest (default: false)")
-  .alias("abs", "keepAbsSegmentPaths")
-  .default("abs", false)
+  .alias("a", "keepAbsSegmentPaths")
+  .default("a", false)
   .describe(
-    "abs",
+    "a",
     "convert the segment URIs to absolute paths (inc protocol & hostname) (default: false)"
   )
   .alias("s", "skipSegments")

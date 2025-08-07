@@ -1,4 +1,3 @@
-
 # HLS-FETCHER
 
 [![Build Status](https://travis-ci.org/videojs/hls-fetcher.svg?branch=master)](https://travis-ci.org/videojs/hls-fetcher)
@@ -13,7 +12,8 @@ A simple CLI tool to fetch an entire hls manifest and it's segments and save it 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [Installation](#installation)
   - [Command Line Usage](#command-line-usage)
@@ -22,18 +22,20 @@ A simple CLI tool to fetch an entire hls manifest and it's segments and save it 
 
 ## Installation
 
-``` bash
+```bash
   $ [sudo] npm install hls-fetcher -g
 ```
 
 ### Command Line Usage
 
 **Example**
+
 ```
 hls-fetcher -i http://example.com/hls_manifest.m3u8
 ```
 
 **Options**
+
 ```
   $ hls-fetcher
   Usage: hls-fetcher
@@ -42,4 +44,6 @@ hls-fetcher -i http://example.com/hls_manifest.m3u8
     -i, --input        uri to m3u8 (required)
     -o, --output       output path (default:'./')
     -c, --concurrency  number of simultaneous fetches (default: 5)
+    -a, --keepAbsSegmentPaths keep absolute segment paths (default: false)
+    -s, --skipSegments   do not download the media segments (default: false)
 ```
